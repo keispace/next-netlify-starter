@@ -6,18 +6,27 @@ export default function Footer() {
   return (
     <>
       <footer className={styles.footer}>
-        <Logo_black />
-        <div className="row-container">
-          <p>농업회사법인 마음(주)</p>
-          <Link href="./about"> 회사소개 </Link>
-          <Link href="./product"> 제품 및 농장 </Link>
-          <Link href="./inspection"> 검사서 게시판 </Link>
-          <Link href="."> 문의 </Link>
+        <div className={styles.wrap}>
+          <Logo_black />
+          <div className={styles.row_container}>
+            <h6>농업회사법인 마음(주)</h6>
+            <div className={styles.row_inner}>
+              <Link href="./about"> 회사소개 </Link>
+              <div className={styles.vr}></div>
+              <Link href="./product"> 제품 및 농장 </Link>
+              <div className={styles.vr}></div>
+              <Link href="./inspection"> 검사서 게시판 </Link>
+              <div className={styles.vr}></div>
+              <Link href="."> 문의 </Link>
+            </div>
+          </div>
         </div>
         <hr />
-        <div className="row-container">
-          © 2023 농업회사법인마음(주). All rights reserved. 대표이사 : 신영민
-          사업자 등록번호 : 000-00-00000 경기도 여주시 세종로 45번길 2 2층
+        <div className={styles.wrap}>
+          <div className={styles.lower}>
+            © 2023 농업회사법인마음(주). All rights reserved. 대표이사 : 신영민
+            사업자 등록번호 : 000-00-00000 경기도 여주시 세종로 45번길 2 2층
+          </div>
         </div>
       </footer>
     </>

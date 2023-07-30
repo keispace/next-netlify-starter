@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <div className={`${styles.header} ${scrolledTop ? '' : styles.down}`}>
       <Link href=".">{scrolledTop ? <Logo_white /> : <Logo_black />}</Link>
-      <div className="row-container">
+      <div className={styles.row_container}>
         <Link href="./about"> 회사소개 </Link>
         <Link href="./product"> 제품 및 농장 </Link>
         <Link href="./inspection"> 검사서 게시판 </Link>
