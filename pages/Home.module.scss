@@ -1,0 +1,14 @@
+.bg1 {
+  background-image: url('/home/bg1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: calc(1184 / 1920 * 100%); /* (img-height / img-width * container-width) */
+  .texts {
+    width: 60vw;
+    margin: calc(-1184 / 1920 * 65%) auto;
+    text-align: center;
+    color: #fff;
+  }
+}

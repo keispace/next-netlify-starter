@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true, // 저장시 format
+  "editor.codeActionsOnSave": {
+    // For ESLint
+    "source.fixAll.eslint": true
+  },
+  // Enable per-language
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.settings.useSplitJSON": true,
+  "typescript.tsdk": "node_modules/typescript/lib" // 요거 넣어줘야 설정이 merge된대요.
+}
