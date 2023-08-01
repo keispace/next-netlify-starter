@@ -7,7 +7,7 @@ export default function Header() {
 
   useEffect(() => {
     const onScroll = (e) => {
-      setScrolledTop(e.target.documentElement.scrollTop === 0)
+      setScrolledTop(e.target.documentElement.scrollTop <= 30)
     }
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)

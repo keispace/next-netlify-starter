@@ -1,4 +1,8 @@
+// import { ExampleTree } from '@components/OrgChart'
 import style from './About.module.scss'
+import dynamic from 'next/dynamic'
+
+const OrgChart = dynamic(() => import('@components/OrgChart'), { ssr: false })
 export default function About() {
   return (
     <div className="container">
@@ -7,13 +11,14 @@ export default function About() {
           src="/about/bg1.png"
           style={{ width: '100vw', maxHeight: '700px' }}
         />
-
         <div className={style.bg2}>
           <div className={style.texts}>
             <h6 style={{ color: '#43E195' }}>Organizational Chart.</h6>
             <h2>농업회사법인마음 조직도</h2>
           </div>
-          <div className={style.org}>조직도 패널</div>
+          <div className={style.org}>
+            <OrgChart />
+          </div>
         </div>
 
         <div className={style.bg3}>
