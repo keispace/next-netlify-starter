@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import style from './Home.module.scss'
+import Link from 'next/link'
 export default function Home() {
   return (
     <div className="container">
@@ -33,8 +34,9 @@ export default function Home() {
               </h5>
             </div>
           </div>
-
-          <button className={style.btn}> 회사소개 보러가기 </button>
+          <Link href="/about">
+            <button className={style.btn}> 회사소개 보러가기 </button>
+          </Link>
         </div>
 
         <div className={style.bg3}>
@@ -52,7 +54,9 @@ export default function Home() {
               독감백신 제조용으로 납품될 만큼 안전과 <br />
               신선도가 보장된 유정란입니다.
             </h5>
-            <button className={style.btn}> 더 알아보기 </button>
+            <Link href="/product">
+              <button className={style.btn}> 더 알아보기 </button>
+            </Link>
           </div>
           <img src="/home/bg3.webp" />
         </div>
@@ -72,16 +76,20 @@ export default function Home() {
               </h5>
             </div>
           </div>
-          <button className={style.btn}> 검사서 확인하기 </button>
+          <Link href="/inspection">
+            <button className={style.btn}> 검사서 확인하기 </button>
+          </Link>
           <div className={style.img5}>
             <div className={style.wrap}>
               <div className={style.texts}>
                 <h6 style={{ color: '#43E195' }}>Contact.</h6>
                 <h4>농업회사법인마음에 문의사항이 있으신가요?</h4>
               </div>
-              <button className={`${style.btn} ${style.black}`}>
-                문의하기
-              </button>
+              <Link href="/contact">
+                <button className={`${style.btn} ${style.black}`}>
+                  문의하기
+                </button>
+              </Link>
             </div>
           </div>
         </div>

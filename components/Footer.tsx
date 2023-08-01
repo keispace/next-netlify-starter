@@ -9,15 +9,17 @@ export default function Footer() {
         <div className={styles.wrap}>
           <Logo_black />
           <div className={styles.row_container}>
-            <h6>농업회사법인 마음(주)</h6>
+            <Link href="/">
+              <h6>농업회사법인 마음(주)</h6>
+            </Link>
             <div className={styles.row_inner}>
-              <Link href="./about"> 회사소개 </Link>
+              <Link href="/about"> 회사소개 </Link>
               <div className={styles.vr}></div>
-              <Link href="./product"> 제품 및 농장 </Link>
+              <Link href="/product"> 제품 및 농장 </Link>
               <div className={styles.vr}></div>
-              <Link href="./inspection"> 검사서 게시판 </Link>
+              <Link href="/inspection"> 검사서 게시판 </Link>
               <div className={styles.vr}></div>
-              <Link href="."> 문의 </Link>
+              <Link href="/contact"> 문의 </Link>
             </div>
           </div>
         </div>

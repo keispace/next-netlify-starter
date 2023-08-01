@@ -45,7 +45,7 @@ h5 {
 }
 h6 {
   margin: 0.8vw 0;
-  font-size: max(20px, 1vw);
+  font-size: max(12px, 1vw);
   font-weight: normal;
 }
 *,
