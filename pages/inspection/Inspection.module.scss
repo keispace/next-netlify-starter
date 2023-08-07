@@ -1,9 +1,9 @@
 .bg2 {
-  padding: 4vw 0;
+  padding: 4rem 0;
   background: #fafafa;
-  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -13,31 +13,25 @@
     text-align: center;
     color: #000;
   }
-  img {
-    width: max(360px, calc(1080 / 1920 * 100%));
+  .imagegrid {
+    display: grid;
+    width: min(1080px, 80vw);
+    grid-template-columns: repeat(4, minmax(100px, auto));
+    img {
+      width: max(100px, 10vw);
+    }
+    .gray {
+      color: rgba(45, 45, 45, 0.3);
+    }
   }
-}
-
-.bg3 {
-  padding: 4vw 0;
-  background: #fafafa;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: max(360px, 60vw);
-  gap: 4vw;
-  .desc {
+  .pages {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    h6 {
-      &.grey {
-        color: #2d2d2d;
-      }
+    gap: 1rem;
+    div {
+      cursor: pointer;
+    }
+    .active {
+      font-weight: 900;
     }
   }
 }

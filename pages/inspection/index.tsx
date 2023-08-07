@@ -1,49 +1,77 @@
+'use client'
 import { promises as fs } from 'fs'
 import path from 'path'
+import { Image } from 'antd'
+import styles from './Inspection.module.scss'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
-// posts will be populated at build time by getStaticProps()
-function Inspection({ inspections }) {
+const setDate = (fileName: string) => {
+  const date = fileName.split('.')[0]
+  const year = date.slice(0, 4)
+  const month = date.slice(4, 6)
+  const day = date.slice(6)
+  return [year, month, day].join('.')
+}
+
+function Inspection({ fileNames, pagings, itemPerPage }) {
+  const router = useRouter()
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  const page = isNaN(+router.query.page) ? 1 : +router.query.page
   return (
     <div className="container">
-      <main>
-        <img
-          src="/inspection/bg1.png"
-          style={{ width: '100vw', maxHeight: '700px' }}
-        />
-        <ul>
-          {inspections.map((post) => (
-            <li key={'inspection' + post.filename}>
-              <h6>{post.filename}</h6>
-              <h6>미생물 검출 실험 결과 통보서</h6>
-              {/* <p>{post.content}</p> */}
-            </li>
-          ))}
-        </ul>
-      </main>
+      {isClient ? (
+        <main>
+          <img src="/inspection/bg1.png" style={{ width: '100vw', maxHeight: '700px' }} />
+
+          <div className={styles.bg2}>
+            <div className={styles.texts}>
+              <h6 style={{ color: '#43E195' }}>Contact.</h6>
+              <h2>검사서 게시판</h2>
+            </div>
+            <div className={styles.imagegrid}>
+              {fileNames.slice((page - 1) * itemPerPage, page * itemPerPage).map((fileName) => (
+                <div key={'inspection' + fileName}>
+                  <Image src={`/inspection/result/${fileName}`} />
+                  <h6 className={styles.gray}>{setDate(fileName)}</h6>
+                  <h6>미생물 검출 실험 결과 통보서</h6>
+                </div>
+              ))}
+            </div>
+
+            <div className={styles.pages}>
+              <div>{'< 이전'}</div>
+              {pagings.map((_, i) => (
+                <Link href={{ pathname: '/inspection', query: { page: i + 1 } }}>
+                  <div className={i + 1 === page ? styles.active : ''} key={`paging+${i}`}>
+                    {i + 1}
+                  </div>
+                </Link>
+              ))}
+              <div>{'다음 >'}</div>
+            </div>
+          </div>
+        </main>
+      ) : null}
     </div>
   )
 }
 
 export async function getStaticProps() {
-  const postsDirectory = path.join(
-    process.cwd(),
-    'public',
-    'inspection',
-    'result',
-  )
+  const postsDirectory = path.join(process.cwd(), 'public', 'inspection', 'result')
   const filenames = await fs.readdir(postsDirectory)
-
-  const inspections = filenames.map(async (filename) => {
-    const filePath = path.join(postsDirectory, filename)
-    const fileContents = await fs.readFile(filePath, 'utf8')
-    return {
-      filename,
-      content: fileContents,
-    }
-  })
+  const itemPerPage = 4
   return {
     props: {
-      inspections: await Promise.all(inspections),
+      fileNames: filenames.sort((a, b) => (b > a ? 1 : -1)),
+      pagings: Array(Math.ceil(filenames.length / itemPerPage)).map((v, i) => i + 1),
+      itemPerPage,
     },
   }
 }
