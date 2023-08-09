@@ -9,12 +9,12 @@
   width: 100vw;
   .texts {
     margin: 0 auto;
-    width: max(360px, 40vw);
+    width: max(375px, 40vw);
     text-align: center;
     color: #000;
   }
   img {
-    width: max(360px, calc(1080 / 1920 * 100%));
+    width: max(375px, calc(1080 / 1920 * 100%));
   }
 }
 
@@ -26,7 +26,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: max(360px, 60vw);
+  width: max(375px, 60vw);
   .desc {
     width: 15vw;
     display: flex;

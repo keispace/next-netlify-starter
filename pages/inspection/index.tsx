@@ -24,6 +24,15 @@ function Inspection({ fileNames, pagings, itemPerPage }) {
   }, [])
 
   const page = isNaN(+router.query.page) ? 1 : +router.query.page
+  const setList = (arr: number[], cur: number) => {
+    const perList = 10
+    const toSmall = arr.length - cur > perList - 1
+    if (!toSmall) {
+      return arr.slice(arr.length - perList)
+    }
+    return arr.slice(cur, cur + 5)
+  }
+
   return (
     <div className="container">
       {isClient ? (
@@ -46,15 +55,23 @@ function Inspection({ fileNames, pagings, itemPerPage }) {
             </div>
 
             <div className={styles.pages}>
-              <div>{'< 이전'}</div>
-              {pagings.map((_, i) => (
-                <Link href={{ pathname: '/inspection', query: { page: i + 1 } }}>
-                  <div className={i + 1 === page ? styles.active : ''} key={`paging+${i}`}>
-                    {i + 1}
+              <Link href={{ pathname: '/inspection', query: { page: page > 1 ? page - 1 : 1 } }}>
+                <div>{'< 이전'}</div>
+              </Link>
+              {setList(pagings, page - 1).map((i) => (
+                <Link href={{ pathname: '/inspection', query: { page: i } }}>
+                  <div className={i === page ? styles.active : ''} key={`paging+${i}`}>
+                    {i}
                   </div>
                 </Link>
               ))}
-              <div>{'다음 >'}</div>
+              <Link
+                href={{
+                  pathname: '/inspection',
+                  query: { page: page < pagings.length ? page + 1 : pagings.length },
+                }}>
+                <div>{'다음 >'}</div>
+              </Link>
             </div>
           </div>
         </main>
@@ -66,11 +83,11 @@ function Inspection({ fileNames, pagings, itemPerPage }) {
 export async function getStaticProps() {
   const postsDirectory = path.join(process.cwd(), 'public', 'inspection', 'result')
   const filenames = await fs.readdir(postsDirectory)
-  const itemPerPage = 4
+  const itemPerPage = 8
   return {
     props: {
       fileNames: filenames.sort((a, b) => (b > a ? 1 : -1)),
-      pagings: Array(Math.ceil(filenames.length / itemPerPage)).map((v, i) => i + 1),
+      pagings: Array.from(Array(Math.ceil(filenames.length / itemPerPage))).map((v, i) => i + 1),
       itemPerPage,
     },
   }

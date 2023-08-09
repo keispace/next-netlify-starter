@@ -101,7 +101,7 @@
 .org {
   position: relative;
   padding: 1vw;
-  width: max(360px, calc(1065 / 1920 * 100vw));
+  width: max(375px, calc(1065 / 1920 * 100vw));
   height: max(300px, calc(670 / 1920 * 100vw));
   background-color: #fff;
   border-radius: 1.25rem;
@@ -140,7 +140,7 @@
       border-top: 0;
     }
     .lv1 {
-      font-size: 1.4vw;
+      font-size: 1.2vw;
       margin-top: -2.5vw;
       margin-left: -10vw;
       display: flex;
@@ -167,6 +167,7 @@
       color: #2d2d2d;
       justify-content: center;
       align-items: center;
+      line-height: 0.9;
     }
   }
 }

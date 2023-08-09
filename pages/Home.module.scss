@@ -37,7 +37,7 @@
     box-shadow: 0px 4px 39px 16px rgba(0, 0, 0, 0.05);
     border-radius: 1.25rem;
     width: calc(1080 / 1920 * 100%);
-    min-width: 360px;
+    min-width: 375px;
     height: 0;
     padding-top: calc(427 / 1920 * 100%);
     .texts {
@@ -62,7 +62,7 @@
   justify-content: center;
   align-items: center;
   width: calc(1080 / 1920 * 100%);
-  min-width: 360px;
+  min-width: 375px;
   .texts {
     width: 33vw;
     text-align: start;
@@ -102,7 +102,7 @@
     background-repeat: no-repeat;
     border-radius: 1.25rem;
     width: calc(1080 / 1920 * 100%);
-    min-width: 360px;
+    min-width: 375px;
     height: 0;
     padding-top: calc(257 / 1080 * 100% - 5vw);
     margin: -2rem 0;
@@ -126,7 +126,7 @@
     padding-top: calc(287 / 1920 * 100%);
     .wrap {
       width: calc(1080 / 1920 * 100%);
-      min-width: 360px;
+      min-width: 375px;
       margin: 0 auto;
       display: flex;
       flex-direction: row;

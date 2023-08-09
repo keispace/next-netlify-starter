@@ -24,33 +24,40 @@ main {
 h1 {
   margin: 1.8vw 0;
   font-size: 3.2vw;
+  line-height: 1.4;
 }
 h2 {
   margin: 1.4vw 0;
   font-size: 2.8vw;
+  line-height: 1.4;
 }
 h3 {
   margin: 1.2vw 0;
   font-size: 2.5vw;
+  line-height: 1.4;
 }
 h4 {
   margin: 1vw 0;
   font-size: 2.2vw;
   font-weight: normal;
+  line-height: 1.4;
 }
 h5 {
-  margin: 0.9vw 0;
+  margin: 0.8vw 0;
   font-size: 1.4vw;
   font-weight: normal;
+  line-height: 1.4;
 }
 h6 {
   margin: 0.8vw 0;
   font-size: max(12px, 1vw);
+  line-height: 1.4;
   font-weight: normal;
 }
 *,
 button {
   font-size: max(12px, 0.8vw);
+  line-height: 1.4;
 }
 
 mark {
@@ -68,4 +75,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 0.8vw;
+}
+
+@media (max-width: 600px) {
 }
