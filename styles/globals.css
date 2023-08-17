@@ -5,7 +5,9 @@ body {
   font-family: Pretendard;
   overflow-x: hidden;
 }
-
+button {
+  font-family: Pretendard;
+}
 * {
   box-sizing: border-box;
   word-break: keep-all;
