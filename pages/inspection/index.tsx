@@ -41,7 +41,7 @@ function Inspection({ fileNames, pagings, itemPerPage }) {
 
           <div className={styles.bg2}>
             <div className={styles.texts}>
-              <h6 style={{ color: '#43E195' }}>Contact.</h6>
+              <h6 style={{ color: '#43E195' }}>Inspection board.</h6>
               <h2>검사서 게시판</h2>
             </div>
             <div className={styles.imagegrid}>
