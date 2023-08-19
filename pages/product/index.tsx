@@ -11,10 +11,19 @@ export default function Product() {
     <div className="container">
       <main>
         <img src="/product/bg1.png" style={{ width: '100vw', maxHeight: '700px' }} />
-
+        <div className={style.package}>
+          <h6 style={{ color: '#43E195' }}>Product Package.</h6>
+          <div className={style.markwrap}>
+            <h3 className={style.mark}>10구 - 8,500원</h3>
+          </div>
+          <div className={style.imgs}>
+            <img src="/home/bg3.webp" />
+            <img src="/home/bg3.webp" />
+          </div>
+        </div>
         <div className={style.bg2}>
           <div className={style.texts}>
-            <h6 style={{ color: '#43E195' }}>Product.</h6>
+            <h6 style={{ color: '#43E195' }}>Feature.</h6>
             <h2>동물복지 순백유정란의 특징</h2>
             <h3>01. 파프리카 복용</h3>
             <h6>동물복지 순백유정란은 보조사료인(시아레드) 파프리카 가루를 복용시킴으로 인해 </h6>

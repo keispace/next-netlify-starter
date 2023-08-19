@@ -15,6 +15,27 @@
   }
 }
 
+.package {
+  padding: 4rem 0;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  .imgs {
+    width: min(1080px, 80vw);
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+      width: 35vw;
+    }
+  }
+}
 .bg2 {
   padding: 4rem 0;
   background: #fafafa;
@@ -32,8 +53,10 @@
   .imgs {
     width: min(1080px, 80vw);
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     img {
-      width: 50%;
+      width: 35vw;
     }
   }
 }
@@ -45,14 +68,25 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 4vw;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .texts {
     color: #000;
+    @media (max-width: 600px) {
+      text-align: center;
+    }
   }
   .imgs {
     img {
-      height: max(430px, 30vh);
+      width: 25vw;
       object-position: top;
+      @media (max-width: 600px) {
+        width: 100vw;
+      }
     }
   }
 }
@@ -74,8 +108,10 @@
   .imgs {
     width: min(1080px, 80vw);
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     img {
-      width: 50%;
+      width: 40vw;
     }
   }
 }
@@ -98,7 +134,7 @@
     width: min(1080px, 80vw);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
+    gap: 0.5rem;
     img:nth-child(1),
     img:nth-child(2),
     img:nth-child(3),

@@ -13,6 +13,11 @@
     text-align: center;
     color: #000;
   }
+  img {
+    padding: 1vw;
+    width: max(320px, calc(1065 / 1920 * 100vw));
+    height: max(214px, calc(670 / 1920 * 100vw));
+  }
 }
 
 .bg3 {
@@ -27,7 +32,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: max(375px, calc(1080 / 1920 * 100%));
+    width: max(320px, calc(1080 / 1920 * 100%));
     .texts {
       width: 33vw;
       color: #000;
@@ -35,7 +40,7 @@
     .history {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      width: 60vw;
+      // width: 100vw;
       img {
         width: 1rem;
         max-width: 1rem;
@@ -58,6 +63,8 @@
         gap: 4px;
         justify-content: flex-start;
         align-items: center;
+        font-size: 1vw;
+
         p {
           color: rgba(45, 45, 45, 0.7);
         }

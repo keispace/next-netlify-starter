@@ -6,16 +6,14 @@ export default function About() {
   return (
     <div className="container">
       <main>
-        <img
-          src="/about/bg1.png"
-          style={{ width: '100vw', maxHeight: '700px' }}
-        />
+        <img src="/about/bg1.png" style={{ width: '100vw', maxHeight: '700px' }} />
         <div className={style.bg2}>
           <div className={style.texts}>
             <h6 style={{ color: '#43E195' }}>Organizational Chart.</h6>
             <h2>농업회사법인마음 조직도</h2>
           </div>
-          <OrgChart />
+          <img src="/about/org.png" />
+          {/* <OrgChart /> */}
         </div>
 
         <div className={style.bg3}>
@@ -27,16 +25,15 @@ export default function About() {
             <img
               src="/about/bg3.png"
               style={{
-                width: 'calc(250 / 1920 * 100%)',
-                minWidth: '125px',
-                maxHeight: '200px',
+                width: 'calc(250 / 1920 * 100vw)',
+                minWidth: '80px',
+                // maxHeight: '200px',
               }}
             />
             <div className={style.history}>
               <div className={style.left}></div>
               <div className={style.right}>
-                <img src="/about/bg4-ring.png" /> <mark>2006</mark>{' '}
-                <p>충북 보은 평사농장 사육</p>
+                <img src="/about/bg4-ring.png" /> <mark>2006</mark> <p>충북 보은 평사농장 사육</p>
               </div>
 
               <div className={style.left}>
@@ -47,19 +44,16 @@ export default function About() {
               <div className={style.left}></div>
               <div className={style.right}>
                 {' '}
-                <img src="/about/bg4-ring.png" /> <mark>2013</mark>{' '}
-                <p>일양약품 독감백신용 납품</p>
+                <img src="/about/bg4-ring.png" /> <mark>2013</mark> <p>일양약품 독감백신용 납품</p>
               </div>
 
               <div className={style.left}>
-                <img src="/about/bg4-ring.png" /> <mark>2017</mark>{' '}
-                <p>한국야쿠르트 납품</p>
+                <img src="/about/bg4-ring.png" /> <mark>2017</mark> <p>한국야쿠르트 납품</p>
               </div>
               <div className={style.right}></div>
               <div className={style.left}></div>
               <div className={style.right}>
-                <img src="/about/bg4-ring.png" /> <mark>2023</mark>{' '}
-                <p>유통전문회사 농업법인 출범</p>
+                <img src="/about/bg4-ring.png" /> <mark>2023</mark> <p>유통전문회사 농업법인 출범</p>
               </div>
             </div>
           </div>
