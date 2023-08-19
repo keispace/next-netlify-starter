@@ -15,11 +15,14 @@ const setDate = (fileName: string) => {
   return [year, month, day].join('.')
 }
 
-function Inspection({ fileNames, pagings, itemPerPage }) {
+function Inspection({ fileNames }) {
   const router = useRouter()
   const [isClient, setIsClient] = useState(false)
-
+  const [itemPerPage, setItemPerPage] = useState(8)
+  const [pagings, setPagings] = useState([])
   useEffect(() => {
+    setItemPerPage(window.innerWidth > 600 ? 8 : 2)
+    setPagings(Array.from(Array(Math.ceil(fileNames.length / (window.innerWidth > 600 ? 8 : 2)))).map((_, i) => i + 1))
     setIsClient(true)
   }, [])
 
@@ -83,12 +86,9 @@ function Inspection({ fileNames, pagings, itemPerPage }) {
 export async function getStaticProps() {
   const postsDirectory = path.join(process.cwd(), 'public', 'inspection', 'result')
   const filenames = await fs.readdir(postsDirectory)
-  const itemPerPage = 8
   return {
     props: {
       fileNames: filenames.sort((a, b) => (b > a ? 1 : -1)),
-      pagings: Array.from(Array(Math.ceil(filenames.length / itemPerPage))).map((v, i) => i + 1),
-      itemPerPage,
     },
   }
 }

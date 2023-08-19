@@ -24,26 +24,30 @@
   width: 100vw;
   .texts {
     margin: 0 auto;
-    width: 40vw;
+    width: 50%;
     text-align: center;
     color: #000;
   }
   .img {
-    margin: 1rem 0;
+    @media (max-width: 600px) {
+      margin-bottom: 2rem;
+    }
+    text-align: start;
+    padding: 2rem;
+    margin-top: 2rem;
     background-image: url('/home/bg2.webp');
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0px 4px 39px 16px rgba(0, 0, 0, 0.05);
     border-radius: 1.25rem;
     width: calc(1080 / 1920 * 100%);
-    min-width: 375px;
-    height: 0;
-    padding-top: calc(427 / 1920 * 100%);
+    min-width: 320px;
+    height: calc(427 / 1920 * 100%);
     .texts {
-      width: 25vw;
-      margin-top: calc(-427 / 1920 * 150%);
-      margin-left: 4vw;
+      // padding: 2rem;
+      margin: 0;
+
       text-align: start;
       color: #000;
       h5 {
@@ -58,12 +62,19 @@
   text-align: center;
   gap: 1rem;
   display: flex;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: calc(1080 / 1920 * 100%);
-  min-width: 375px;
+  min-width: 320px;
   .texts {
+    @media (max-width: 600px) {
+      width: 100%;
+      text-align: center;
+    }
     width: 33vw;
     text-align: start;
     color: #000;
@@ -74,12 +85,16 @@
   img {
     width: 25vw;
     min-width: 175px;
+    @media (max-width: 600px) {
+      width: 50vw;
+      min-width: 160px;
+    }
   }
 }
 
 .bg4 {
   padding: 4rem 0 0 0;
-  background: #fff;
+  background: #fafafa;
   text-align: center;
   gap: 1rem;
   display: flex;
@@ -88,6 +103,9 @@
   align-items: center;
   width: 100vw;
   .texts {
+    @media (max-width: 600px) {
+      width: 100vw;
+    }
     width: 40vw;
     text-align: center;
     color: #000;
@@ -103,23 +121,30 @@
     border-radius: 1.25rem;
     width: calc(1080 / 1920 * 100vw);
     min-width: 375px;
-    // height: 0;
-    // padding-top: calc(257 / 1080 * 100% - 5vw);
     height: calc(364 / 1920 * 100vw);
     margin: -2rem 0;
-    // .texts {
-    // width: 35vw;
-    // margin-top: calc(-257 / 1080 * 100%);
-    // margin-left: 4vw;
     text-align: start;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    h5 {
+    @media (max-width: 600px) {
+      margin: 0;
+      height: fit-content;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem 0;
+      &.btn {
+        margin: 2rem 0;
+      }
+    }
+    & > h5 {
       margin-left: min(4rem, 5vw);
+      @media (max-width: 600px) {
+        margin: 0;
+        background: rgba(0, 0, 0, 0.2);
+      }
       color: rgba(255, 255, 255, 0.7);
     }
-    // }
   }
   .img5 {
     background-image: url('/home/bg5.webp');
@@ -128,18 +153,30 @@
     background-repeat: no-repeat;
     width: 100vw;
     height: calc(287 / 1920 * 100vw);
+    @media (max-width: 600px) {
+      height: fit-content;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
     .wrap {
       width: calc(1080 / 1920 * 100%);
-      min-width: 375px;
+      min-width: 320px;
       margin: 0 auto;
       display: flex;
+      @media (max-width: 600px) {
+        flex-direction: column;
+        justify-content: center;
+      }
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       .texts {
+        @media (max-width: 600px) {
+          text-align: center;
+          width: 80vw;
+          padding: 1rem 0;
+        }
         width: 36vw;
         text-align: start;
         color: #fff;

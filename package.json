@@ -9,6 +9,7 @@
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@ant-design/icons": "^5.2.5",
     "antd": "^5.8.2",
     "next": "^12.1.5",
     "react": "^18.0.0",

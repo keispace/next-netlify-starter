@@ -65,7 +65,6 @@ export default function Home() {
             <h5>미생물 검출 실험 결과 통보서를 확인해보세요.</h5>
           </div>
           <div className={style.img4}>
-            {/* <div className={style.texts}> */}
             <h5>
               동물복지 순백유정란은 배대지를 이용한 salmonella
               <br />
@@ -73,11 +72,11 @@ export default function Home() {
               <br />
               Escherichia coli 검출 실험을 주에 1회씩 실시합니다.
             </h5>
-            {/* </div> */}
           </div>
           <Link href="/inspection">
             <button className={style.btn}> 검사서 확인하기 </button>
           </Link>
+
           <div className={style.img5}>
             <div className={style.wrap}>
               <div className={style.texts}>

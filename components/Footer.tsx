@@ -20,7 +20,7 @@ export default function Footer() {
               <Link href="/product">
                 <h6>제품 및 농장</h6>
               </Link>
-              <div className={styles.vr}></div>
+              <div className={`${styles.vr}`}></div>
               <Link href="/inspection">
                 <h6>검사서 게시판</h6>
               </Link>

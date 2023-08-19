@@ -17,8 +17,18 @@
     display: grid;
     width: min(1080px, 80vw);
     grid-template-columns: repeat(4, minmax(100px, auto));
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
     img {
       width: max(100px, 10vw);
+      @media (max-width: 600px) {
+        width: 50vw;
+      }
     }
     .gray {
       color: rgba(45, 45, 45, 0.3);
