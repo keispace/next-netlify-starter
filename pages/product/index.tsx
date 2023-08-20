@@ -13,9 +13,7 @@ export default function Product() {
         <img src="/product/bg1.png" style={{ width: '100vw', maxHeight: '700px' }} />
         <div className={style.package}>
           <h6 style={{ color: '#43E195' }}>Product Package.</h6>
-          <div className={style.markwrap}>
-            <h3 className={style.mark}>10구 - 8,500원</h3>
-          </div>
+          <h3 className={`${style.mark} ${style.h3}`}>10구 - 8,500원</h3>
           <div className={style.imgs}>
             <img src="/home/bg3.webp" />
             <img src="/home/bg3.webp" />
@@ -26,12 +24,10 @@ export default function Product() {
             <h6 style={{ color: '#43E195' }}>Feature.</h6>
             <h2>동물복지 순백유정란의 특징</h2>
             <h3>01. 파프리카 복용</h3>
-            <h6>동물복지 순백유정란은 보조사료인(시아레드) 파프리카 가루를 복용시킴으로 인해 </h6>
-            <div className={style.markwrap}>
-              <h6 className={style.mark}>
-                불포화지방산 함량이 높습니다. 계란 노른자의 색이 오렌지 색에 가깝게 나타나는 특성이 있습니다.
-              </h6>
-            </div>
+            <h6>동물복지 순백유정란은 보조사료인(시아레드) 파프리카 가루를 복용시킴으로 인해</h6>
+            <h6 className={style.mark}>
+              불포화지방산 함량이 높습니다. 계란 노른자의 색이 오렌지 색에 가깝게 나타나는 특성이 있습니다.
+            </h6>
           </div>
           <div className={style.imgs}>
             <img src="/product/bg2-1.png" />
@@ -43,9 +39,7 @@ export default function Product() {
           <div className={style.texts}>
             <h3>02. 매주 주 1회 미생물 검사</h3>
             <h6>충남대학교 수의과대학 연구실과 협력하여</h6>
-            <div className={style.markwrap}>
-              <h6 className={style.mark}>대장균 및 살모넬라 검사를 매주 시행하고 있습니다.</h6>
-            </div>
+            <h6 className={style.mark}>대장균 및 살모넬라 검사를 매주 시행하고 있습니다.</h6>
           </div>
           <div className={style.imgs}>
             <img src="/product/bg3.png" />
@@ -56,9 +50,7 @@ export default function Product() {
           <div className={style.texts}>
             <h3>03. 독감백신의 원료</h3>
             <h6>독감백신 제조용으로 남품되어</h6>
-            <div className={style.markwrap}>
-              <h6 className={style.mark}>안전과 신선도가 보장된 유정란입니다.</h6>
-            </div>
+            <h6 className={style.mark}>안전과 신선도가 보장된 유정란입니다.</h6>
           </div>
           <div className={style.imgs}>
             <img src="/product/bg4-1.png" />

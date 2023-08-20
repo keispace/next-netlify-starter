@@ -17,6 +17,10 @@
     padding: 1vw;
     width: max(320px, calc(1065 / 1920 * 100vw));
     height: max(214px, calc(670 / 1920 * 100vw));
+    @media (max-width: 600px) {
+      width: 90vw;
+      height: 58vw;
+    }
   }
 }
 

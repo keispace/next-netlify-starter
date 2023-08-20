@@ -7,7 +7,12 @@ export default function Footer() {
     <>
       <footer className={styles.footer}>
         <div className={styles.wrap}>
-          <Logo_black />
+          <Link href="/">
+            <div className={styles.logo}>
+              <Logo_black />
+              <h5>농업회사법인 마음(주)</h5>
+            </div>
+          </Link>
           <div className={styles.row_container}>
             <Link href="/">
               <h6>농업회사법인 마음(주)</h6>
