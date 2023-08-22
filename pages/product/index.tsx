@@ -64,10 +64,10 @@ export default function Product() {
             <h2>동물복지 순백유정란 사육농장</h2>
           </div>
           <div className={style.imgs}>
-            <img src="/product/bg5-1.png" />
+            {/* <img src="/product/bg5-1.png" /> */}
             <img src="/product/bg5-2.png" />
             <img src="/product/bg5-3.png" />
-            <img src="/product/bg5-4.png" />
+            {/* <img src="/product/bg5-4.png" /> */}
             <img src="/product/bg5-5.png" />
             <img src="/product/bg5-6.png" />
           </div>
