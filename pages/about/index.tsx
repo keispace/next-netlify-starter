@@ -33,27 +33,27 @@ export default function About() {
             <div className={style.history}>
               <div className={style.left}></div>
               <div className={style.right}>
-                <img src="/about/bg4-ring.png" /> <mark>2006</mark> <p>충북 보은 평사농장 사육</p>
+                <Icon_ring /> <mark>2006</mark> <p>충북 보은 평사농장 사육</p>
               </div>
 
               <div className={style.left}>
-                <img src="/about/bg4-ring.png" />
+                <Icon_ring />
                 <mark>2010</mark> <p>평사농장 증설 및 증축</p>
               </div>
               <div className={style.right}></div>
               <div className={style.left}></div>
               <div className={style.right}>
                 {' '}
-                <img src="/about/bg4-ring.png" /> <mark>2013</mark> <p>일양약품 독감백신용 납품</p>
+                <Icon_ring /> <mark>2013</mark> <p>일양약품 독감백신용 납품</p>
               </div>
 
               <div className={style.left}>
-                <img src="/about/bg4-ring.png" /> <mark>2017</mark> <p>한국야쿠르트 납품</p>
+                <Icon_ring /> <mark>2017</mark> <p>한국야쿠르트 납품</p>
               </div>
               <div className={style.right}></div>
               <div className={style.left}></div>
               <div className={style.right}>
-                <img src="/about/bg4-ring.png" /> <mark>2023</mark> <p>유통전문회사 농업법인 출범</p>
+                <Icon_ring /> <mark>2023</mark> <p>유통전문회사 농업법인 출범</p>
               </div>
             </div>
           </div>
@@ -87,3 +87,10 @@ export default function About() {
     </div>
   )
 }
+
+const Icon_ring = () => (
+  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10.5" r="10" fill="#43E195" />
+    <circle cx="10" cy="10.5" r="5.38462" fill="#EDFFF6" />
+  </svg>
+)

@@ -45,19 +45,21 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       // width: 100vw;
-      img {
+      svg {
         width: 1rem;
         max-width: 1rem;
       }
       .right {
         flex-direction: row;
-        img {
-          margin-left: -0.5rem;
+        svg {
+          // margin-left: -0.5rem;
+          transform: translateX(-54%);
         }
       }
       .left {
-        img {
-          margin-right: -0.5rem;
+        svg {
+          // margin-right: -0.5rem;
+          transform: translateX(54%);
         }
         flex-direction: row-reverse;
         border-right: 1px dashed #43e195;
@@ -67,7 +69,7 @@
         gap: 4px;
         justify-content: flex-start;
         align-items: center;
-        font-size: 1vw;
+        font-size: max(10px, 1vw);
 
         p {
           color: rgba(45, 45, 45, 0.7);
