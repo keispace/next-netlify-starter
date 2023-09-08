@@ -60,7 +60,7 @@ export default function Home() {
               <button className={style.btn}> 더 알아보기 </button>
             </Link>
           </div>
-          <img src="/home/bg3.webp" />
+          <img src="/home/bg3-1.webp" />
         </div>
 
         <div className={style.bg4}>

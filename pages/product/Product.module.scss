@@ -42,6 +42,11 @@
     margin: 0 auto;
     text-align: center;
     color: #000;
+    .shrink {
+      @media (max-width: 600px) {
+        letter-spacing: -0.8px;
+      }
+    }
   }
   .imgs {
     width: min(1080px, 80vw);

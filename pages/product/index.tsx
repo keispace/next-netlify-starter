@@ -24,7 +24,9 @@ export default function Product() {
             <h6 style={{ color: '#43E195' }}>Feature.</h6>
             <h2>동물복지 순백유정란의 특징</h2>
             <h3>01. 파프리카 복용</h3>
-            <h6>동물복지 순백유정란은 보조사료인(시아레드) 파프리카 가루를 복용시킴으로 인해</h6>
+            <h6 className={style.shrink}>
+              동물복지 순백유정란은 보조사료인(시아레드) 파프리카 가루를 복용시킴으로 인해
+            </h6>
             <h6 className={style.mark}>
               불포화지방산 함량이 높습니다. 계란 노른자의 색이 오렌지 색에 가깝게 나타나는 특성이 있습니다.
             </h6>

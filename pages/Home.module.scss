@@ -10,6 +10,9 @@
     margin: calc(-1184 / 1920 * 65%) auto;
     text-align: center;
     color: #fff;
+    @media (max-width: 600px) {
+      width: 50vw;
+    }
   }
 }
 
@@ -175,7 +178,7 @@
         @media (max-width: 600px) {
           text-align: center;
           width: 80vw;
-          padding: 1rem 0;
+          padding: 1rem 0 0 0;
         }
         width: 36vw;
         text-align: start;
