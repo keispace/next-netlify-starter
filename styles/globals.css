@@ -82,7 +82,7 @@ main {
     gap: 0.8vw;
   }
 }
-#__next {
+#maeum {
   .ant-drawer-mask {
     background: none !important;
   }
