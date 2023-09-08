@@ -15,8 +15,8 @@ export default function Product() {
           <h6 style={{ color: '#43E195' }}>Product Package.</h6>
           <h3 className={`${style.mark} ${style.h3}`}>10구 - 8,500원</h3>
           <div className={style.imgs}>
-            <img src="/home/bg3.webp" />
-            <img src="/home/bg3.webp" />
+            <img src="/home/bg3-1.webp" />
+            <img src="/home/bg3-2.webp" />
           </div>
         </div>
         <div className={style.bg2}>
