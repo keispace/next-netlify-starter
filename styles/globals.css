@@ -81,7 +81,8 @@ main {
     align-items: center;
     gap: 0.8vw;
   }
-
+}
+#__next {
   .ant-drawer-mask {
     background: none !important;
   }
